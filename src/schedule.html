@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <title>UIC Interactive 3D</title>
+  
+  <link rel="stylesheet" href="main.css">
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+
+  <script>
+    // If running locally, enable livereload for automatically refreshing
+    // the browser when a change to a file is made
+    var hostname = location.hostname;
+    if (hostname === "localhost" || hostname === "127.0.0.1") {
+      document.write('<script src="//' + hostname + 
+               ':35729/livereload.js?snipver=1"></' + 'script>');
+    }
+  </script>
+  </head>
+  <body>
+
+  <div class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <a href="index.html" class="navbar-brand">Interactive 3D</a>
+        <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        </button>
+      </div>
+
+      <div class="navbar-collapse collapse navbar-right" id="navbar-main">
+        <ul class="nav navbar-nav">
+        <li>
+          <a href="index.html">
+            Syllabus
+            <div class="nav-underline"></div>
+          </a>        
+        </li>
+        <li class="active">
+          <a href="schedule.html">
+            Schedule
+            <div class="nav-underline"></div>
+          </a>
+        </li>
+        <!-- <li>
+          <a href="project.html">Projects</a>
+        </li>
+        <li>
+          <a href="resource.html">Resources</a>
+        </li> -->
+        <li>
+          <a href="https://uic-interactive3d.slack.com/">
+            Slack (REPLACE LINK)
+            <div class="nav-underline"></div>
+          </a>
+        </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  
+  <div id="schedule" class="container">
+    
+    <div class="week">
+      <h1 class="week-title">Week 1</h1>
+      <div class="row">
+        <div class="col-xs-6">
+          <h2 class="day-title">Day 1 (1/9)</h2>
+          <!-- <h3>Topics</h3>
+          <ul>
+            <li>Introductions</li>
+            <li>Unity Overview</li>
+            <li>Primitives</li>
+            <li>Physics</li>
+            <li>Materials</li>
+          </ul>
+          <h3>Class Materials</h3>
+          <ul>
+            <li><a href="https://github.com/mikewesthad/uic-interactive3d/raw/master/class-files/slides/Day01_Slides.pdf">Slides</a></li>
+            <li><a href="https://github.com/mikewesthad/uic-interactive3d/raw/master/class-files/projects/unity/Day01_Introduction.zip">Unity Project</a></li> -->
+          </ul>
+        </div>
+        <div class="col-xs-6">
+          <h2 class="day-title">Day 2 (1/11)</h2>
+          <!-- <h3>Topics</h3>
+          <ul>
+            <li>Oreos</li>
+            <li>Textures</li>
+            <li>Lighting</li>
+          </ul>
+          <h3>Class Materials</h3>
+          <ul>
+            <li><a href="https://github.com/mikewesthad/uic-interactive3d/raw/master/class-files/projects/unity/Day02_Introduction.zip">Unity Project</a></li>
+          </ul> -->
+        </div>
+      </div>
+    </div>
+
+    <!-- <div class="week">
+      <h1 class="week-title">Week 2</h1>
+      <div class="row">
+        <div class="col-xs-6">
+          <h2 class="day-title">Day 3 (8/30)</h2>
+          <h3>Topics</h3>
+          <ul>
+            <li>Indoor Lighting</li>
+            <li>Building Project</li>
+            <li>Logging and Variables in C#</li>
+          </ul>
+          <h3>Class Materials</h3>
+          <ul>
+            <li><a href="https://github.com/mikewesthad/uic-interactive3d/raw/master/class-files/slides/Day03_Slides.pdf">Slides</a></li>
+            <li><a href="https://github.com/mikewesthad/uic-interactive3d/raw/master/class-files/projects/unity/Day03_LightingAndCoding.zip">Unity Project</a></li>
+          </ul>
+        </div>
+        <div class="col-xs-6">
+          <h2 class="day-title">Day 4 (9/1)</h2>
+          <h3>Topics</h3>
+          <ul>
+            <li>Variables</li>
+            <li>Functions</li>
+            <li>Start vs Update</li>
+            <li>Transform in C#</li>
+          </ul>
+          <h3>Class Materials</h3>
+          <ul>
+            <li><a href="https://github.com/mikewesthad/uic-interactive3d/raw/master/class-files/slides/Day04_Slides.pdf">Slides</a></li>
+            <li><a href="https://github.com/mikewesthad/uic-interactive3d/raw/master/class-files/projects/unity/Day04_Coding.zip">Unity Project</a></li>
+          </ul>
+          <h3>Homework</h3>
+          <ul>
+            <li><a href="https://github.com/mikewesthad/uic-interactive3d/raw/master/class-files/homework/Day04_Homework.pdf">Functions Assignment</a></li>
+            <li><a href="https://github.com/mikewesthad/uic-interactive3d/raw/master/class-files/projects/unity/Day04_HomeworkSolution.zip">Functions Assignment Solution</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="week">
+      <h1 class="week-title">Week 3</h1>
+      <div class="row">
+        <div class="col-xs-6">
+          <h2 class="day-title">Day 5 (9/6)</h2>
+          <h3>Topics</h3>
+          <ul>
+            <li>Conditionals</li>
+            <li>Keyboard Input</li>
+            <li>Mouse Input</li>
+            <li>Fields</li>
+          </ul>
+          <h3>Class Materials</h3>
+          <ul>
+            <li><a href="https://github.com/mikewesthad/uic-interactive3d/raw/master/class-files/slides/Day05_Slides.pdf">Slides</a></li>
+            <li><a href="https://github.com/mikewesthad/uic-interactive3d/raw/master/class-files/projects/unity/Day05_Input.zip">Unity Project</a></li>
+          </ul>
+        </div>
+        <div class="col-xs-6">
+          <h2 class="day-title">Day 6 (9/8)</h2>
+          <h3>Topics</h3>
+          <ul>
+            <li>Quaternions</li>
+            <li>Fly Controls</li>
+            <li>Importing Assets</li>
+            <li>Classes</li>
+          </ul>
+          <h3>Class Materials</h3>
+          <ul>
+            <li><a href="https://github.com/mikewesthad/uic-interactive3d/raw/master/class-files/slides/Day06_Slides.pdf">Slides</a></li>
+            <li><a href="https://github.com/mikewesthad/uic-interactive3d/raw/master/class-files/projects/unity/Day06_Controls.zip">Unity Project</a></li>
+          </ul>
+          <h3>Homework</h3>
+          <ul>
+            <li><a href="https://github.com/mikewesthad/uic-interactive3d/raw/master/class-files/homework/Day06_Homework.pdf">Scripting Assignment</a></li>
+            <li><a href="https://github.com/mikewesthad/uic-interactive3d/raw/master/class-files/projects/unity/Day06_HomeworkSolution.zip">Scripting Assignment Solution</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="week">
+      <h1 class="week-title">Week 4</h1>
+      <div class="row">
+        <div class="col-xs-6">
+          <h2 class="day-title">Day 7 (9/13)</h2>
+          <h3>Topics</h3>
+          <ul>
+            <li>Classes &amp; Instances</li>
+            <li>Manipulating Lights</li>
+          </ul>
+          <h3>Class Materials</h3>
+          <ul>
+            <li><a href="https://github.com/mikewesthad/uic-interactive3d/raw/master/class-files/slides/Day07_Slides.pdf">Slides</a></li>
+            <li><a href="https://github.com/mikewesthad/uic-interactive3d/raw/master/class-files/projects/unity/Day07_Classes.zip">Unity Project</a></li>
+          </ul>
+        </div>
+        <div class="col-xs-6">
+          <h2 class="day-title">Day 8 (9/15)</h2>
+          <h3>Topics</h3>
+          <ul>
+            <li>Static Classes</li>
+            <li>Vector3</li>
+            <li>Distance</li>
+            <li>Rigidbodies</li>
+            <li>Loops</li>
+          </ul>
+          <h3>Class Materials</h3>
+          <ul>
+            <li><a href="https://github.com/mikewesthad/uic-interactive3d/raw/master/class-files/projects/unity/Day08_StarterFiles.zip">Class Starter Project</a></li> 
+            <li><a href="https://github.com/mikewesthad/uic-interactive3d/raw/master/class-files/slides/Day08_Slides.pdf">Slides</a></li>
+            <li><a href="https://github.com/mikewesthad/uic-interactive3d/raw/master/class-files/projects/unity/Day08_MoreClasses.zip">Unity Project</a></li>
+          </ul>
+          <h3>Homework</h3>
+          <ul>
+            <li><a href="https://github.com/mikewesthad/uic-interactive3d/raw/master/class-files/homework/Day08_Homework.zip">Distance Scripting Assignment</a></li>
+            <li><a href="https://github.com/mikewesthad/uic-interactive3d/raw/master/class-files/projects/unity/Day08_HomeworkSolution.zip">Distance Assignment Solution</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="week">
+      <h1 class="week-title">Week 5</h1>
+      <div class="row">
+        <div class="col-xs-6">
+          <h2 class="day-title">Day 9 (9/20)</h2>
+          <h3>Topics</h3>
+          <ul>
+            <li>Shortcuts in Homework</li>
+            <li>Distance &amp; Lerping</li>
+            <li>Applying Forces</li>
+            <li>"Light Bulb" Effect</li>
+            <li>Scheduling Events</li>
+          </ul>
+          <h3>Class Materials</h3>
+          <ul>
+            <li><a href="https://github.com/mikewesthad/uic-interactive3d/raw/master/class-files/slides/Day09_Slides.pdf">Slides</a></li>
+            <li><a href="https://github.com/mikewesthad/uic-interactive3d/raw/master/class-files/projects/unity/Day09_PoppingLights.zip">Unity Project</a></li>
+          </ul>
+        </div>
+        <div class="col-xs-6">
+          <h2 class="day-title">Day 10 (9/22)</h2>
+          <h3>Topics</h3>
+          <ul>
+            <li>Midterm</li>
+            <li>Loops</li>
+            <li>Arrays</li>
+          </ul>
+          <h3>Class Materials</h3>
+          <ul>
+            <li><a href="https://github.com/mikewesthad/uic-interactive3d/raw/master/class-files/slides/Day10_Slides.pdf">Slides</a></li>
+            <li><a href="https://github.com/mikewesthad/uic-interactive3d/raw/master/class-files/projects/unity/Day10_Class.zip">Unity Project</a></li>
+          </ul>
+          <h3>Homework</h3>
+          <ul>
+            <li><a href="https://github.com/mikewesthad/uic-interactive3d/raw/master/class-files/homework/Midterm.pdf">Midterm Assignment</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="week">
+      <h1 class="week-title">Week 6</h1>
+      <div class="row">
+        <div class="col-xs-6">
+          <h2 class="day-title">Day 11 (9/27)</h2>
+          <h3>Topics</h3>
+          <ul>
+            <li>Arrays</li>
+            <li>Explosions</li>
+          </ul>
+          <h3>Class Materials</h3>
+          <ul>
+            <li><a href="https://github.com/mikewesthad/uic-interactive3d/raw/master/class-files/slides/Day11_Slides.pdf">Slides</a></li>
+            <li><a href="https://github.com/mikewesthad/uic-interactive3d/raw/master/class-files/projects/unity/Day11_Class.zip">Unity Project</a></li>
+          </ul>
+        </div>
+        <div class="col-xs-6">
+          <h2 class="day-title">Day 12 (9/29)</h2>
+          <h3>Topics</h3>
+          <ul>
+            <li>Explosions</li>
+            <li>Raycasting</li>
+          </ul>
+          <h3>Class Materials</h3>
+          <ul>
+            <li><a href="https://github.com/mikewesthad/uic-interactive3d/raw/master/class-files/slides/Day12_Slides.pdf">Slides</a></li>
+            <li><a href="https://github.com/mikewesthad/uic-interactive3d/raw/master/class-files/projects/unity/Day12_Class.zip">Unity Project</a></li>
+          </ul>
+          <h3>Homework</h3>
+          <ul>
+            <li><a href="https://github.com/mikewesthad/uic-interactive3d/raw/master/class-files/homework/Day12_Homework.pdf">Raycasting Assignment (due 10/6)</a></li>
+            <li><a href="https://github.com/mikewesthad/uic-interactive3d/raw/master/class-files/projects/unity/Day12_HomeworkSolution.zip">Raycasting Assignment Solution</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="week">
+      <h1 class="week-title">Week 7</h1>
+      <div class="row">
+        <div class="col-xs-6">
+          <h2 class="day-title">Day 13 (10/4)</h2>
+          <h3>Topics</h3>
+          <ul>
+            <li>Scripts as Independent Components</li>
+            <li>RenderTexture</li>
+            <li>Image Effects</li>
+            <li>Communicating Between Scripts</li>
+          </ul>
+          <h3>Class Materials</h3>
+          <ul>
+            <li><a href="https://github.com/mikewesthad/uic-interactive3d/raw/master/class-files/slides/Day13_Slides.pdf">Slides</a></li>
+            <li><a href="https://github.com/mikewesthad/uic-interactive3d/raw/master/class-files/projects/unity/Day13_Class.zip">Unity Project</a></li>
+          </ul>
+        </div>
+        <div class="col-xs-6">
+          <h2 class="day-title">Day 14 (10/6)</h2>
+          <h3>Topics</h3>
+          <ul>
+            <li>Picking Up Objects</li>
+            <li>Lab Day</li>
+          </ul>
+          <h3>Class Materials</h3>
+          <ul>
+            <li><a href="https://github.com/mikewesthad/uic-interactive3d/raw/master/class-files/slides/Day14_Slides.pdf">Slides</a></li>
+            <li><a href="https://github.com/mikewesthad/uic-interactive3d/raw/master/class-files/projects/unity/Day14_Class.zip">Unity Project</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="week">
+      <h1 class="week-title">Week 8</h1>
+      <div class="row">
+        <div class="col-xs-6">
+          <h2 class="day-title">Day 15 (10/11)</h2>
+          <h3>Topics</h3>
+          <ul>
+            <li>Flashlight</li>
+            <li>Sounds</li>
+            <li>Lab Day</li>
+          </ul>
+          <h3>Class Materials</h3>
+          <ul>
+            <li><a href="https://github.com/mikewesthad/uic-interactive3d/raw/master/class-files/projects/unity/Day15_Trimmed.zip">Unity Project</a></li>
+          </ul>
+        </div>
+        <div class="col-xs-6">
+          <h2 class="day-title">Day 16 (10/13)</h2>
+          <h3>Topics</h3>
+          <ul>
+            <li>Sounds</li>
+            <li>Triggers</li>
+            <li>Lab Day</li>
+          </ul>
+          <h3>Class Materials</h3>
+          <ul>
+            <li><a href="https://github.com/mikewesthad/uic-interactive3d/raw/master/class-files/projects/unity/Day16_Class.zip">Unity Project</a></li>
+          </ul>          
+          <h3>Homework</h3>
+          <ul>
+            <li>Midterm due 10/18</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="week">
+      <h1 class="week-title">Week 9</h1>
+      <div class="row">
+        <div class="col-xs-6">
+          <h2 class="day-title">Day 17 (10/18)</h2>
+          <h3>Topics</h3>
+          <ul>
+            <li>Midterm Presentations</li>
+          </ul>
+        </div>
+        <div class="col-xs-6">
+          <h2 class="day-title">Day 18 (10/20)</h2>
+          <h3>Topics</h3>
+          <ul>
+            <li>Midterm Presentations</li>
+            <li>Clappy Bird</li>
+          </ul>
+          <h3>Class Materials</h3>
+          <ul>
+            <li><a href="https://github.com/mikewesthad/uic-interactive3d/raw/master/class-files/projects/unity/Day18_Class.zip">Unity Project</a></li>
+          </ul>          
+          <h3>Homework</h3>
+          <ul>
+            <li><a href="https://github.com/mikewesthad/uic-interactive3d/raw/master/class-files/homework/FinalProposal.pdf">Final Proposal (Due 11/3)</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="week">
+      <h1 class="week-title">Week 10</h1>
+      <div class="row">
+        <div class="col-xs-6">
+          <h2 class="day-title">Day 19 (10/25)</h2>
+          <h3>Topics</h3>
+          <ul>
+            <li>Clappy Bird</li>
+          </ul>    
+          <h3>Class Materials</h3>
+          <ul>
+            <li><a href="https://github.com/mikewesthad/uic-interactive3d/raw/master/class-files/projects/unity/Day19_Class.zip">Unity Project</a></li>
+          </ul>
+          <h3>Homework</h3>
+          <ul>
+            <li>Final Proposal (Due 11/3)</li>
+          </ul>
+        </div>
+        <div class="col-xs-6">
+          <h2 class="day-title">Day 20 (10/28)</h2>
+          <h3>Topics</h3>
+          <ul>
+            <li>Clappy Bird &amp; Modular Code</li>
+            <li>Particle Systems</li>
+          </ul>
+          <h3>Class Materials</h3>
+          <ul>
+            <li><a href="https://github.com/mikewesthad/uic-interactive3d/raw/master/class-files/slides/Day20_Slides.pdf">Slides</a></li>
+            <li><a href="https://github.com/mikewesthad/uic-interactive3d/raw/master/class-files/projects/unity/Day20_Class.zip">Unity Clappy Bird</a></li>
+            <li><a href="https://github.com/mikewesthad/uic-interactive3d/raw/master/class-files/projects/unity/Day20_Unity5.5_Particles_Class.zip">Unity 5.5 Particles</a></li>
+          </ul>          
+          <h3>Homework</h3>
+          <ul>
+            <li>Final Proposal (Due 11/3)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="week">
+      <h1 class="week-title">Week 11</h1>
+      <div class="row">
+        <div class="col-xs-6">
+          <h2 class="day-title">Day 21 (11/1)</h2>
+          <h3>Topics</h3>
+          <ul>
+            <li>Particle Systems</li>
+            <li>Scripting with Particles</li>
+          </ul>    
+          <h3>Class Materials</h3>
+          <ul>
+            <li><a href="https://github.com/mikewesthad/uic-interactive3d/raw/master/class-files/projects/unity/Day21_Unity5.5_Particles_Class.zip">Unity 5.5 Particles</a></li>
+          </ul>
+          <h3>Homework</h3>
+          <ul>
+            <li>Final Proposal (Due 11/3)</li>
+          </ul>
+        </div>
+        <div class="col-xs-6">
+          <h2 class="day-title">Day 22 (11/3)</h2>
+          <h3>Topics</h3>
+          <ul>
+            <li>Android Mobile Development!</li>
+            <li>Scripting Particles</li>
+            <li>Touch Input</li>
+          </ul>
+          <h3>Class Materials</h3>
+          <ul>
+            <li><a href="https://github.com/mikewesthad/uic-interactive3d/raw/master/class-files/slides/Day22_AndroidSetup.pdf">Android Setup Guide</a></li>
+            <li><a href="https://github.com/mikewesthad/uic-interactive3d/raw/master/class-files/projects/unity/Day22_Unity5.5_Particles_Class.zip">Unity 5.5 Particles &amp; Touch</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+     <div class="week">
+      <h1 class="week-title">Week 12</h1>
+      <div class="row">
+        <div class="col-xs-6">
+          <h2 class="day-title">Day 23 (11/8)</h2>
+          <h3>Topics</h3>
+          <ul>
+            <li>iOS Building</li>
+            <li>Multi-touch</li>
+            <li>Blender</li>
+          </ul>    
+          <h3>Class Materials</h3>
+          <ul>
+            <li><a href="https://github.com/mikewesthad/uic-interactive3d/raw/master/class-files/projects/unity/Day23_Unity5.5_Class.zip">Unity 5.5 Class Files</a></li>
+            <li><a href="https://github.com/mikewesthad/uic-interactive3d/raw/master/class-files/slides/Day23_iOSSetup.pdf">iOS Setup Guide</a></li>
+            <li><a href="https://github.com/mikewesthad/uic-interactive3d/raw/master/class-files/slides/Day23_Unity.pdf">Unity Slides: Dictionaries</a></li>
+            <li><a href="https://github.com/mikewesthad/uic-interactive3d/raw/master/class-files/slides/Day23_Blender.pdf">Blender Slides: Introduction</a></li>
+            <li><a href="https://github.com/mikewesthad/uic-interactive3d/raw/master/class-files/slides/Day23_BlenderGuru_KeyboardShortcutGuide.pdf">Blender Guru Keyboard Shortcuts</a></li>
+            <li><a href="https://github.com/mikewesthad/uic-interactive3d/raw/master/class-files/slides/Day23_HotkeyPoster.png">Visual Keyboard Shortcuts</a></li>
+          </ul>
+          <h3>Homework</h3>
+          <ul>
+            <li>Work on Final Project</li>
+          </ul>
+        </div>
+        <div class="col-xs-6">
+          <h2 class="day-title">Day 24 (11/10)</h2>
+          <h3>Topics</h3>
+          <ul>
+            <li>Particles in 3D</li>
+            <li>Blender</li>
+            <li>Cell Fracturing</li>
+          </ul>
+          <h3>Class Materials</h3>
+          <ul>
+            <li><a href="https://github.com/mikewesthad/uic-interactive3d/raw/master/class-files/projects/unity/Day24_Unity5.5_Class.zip">Unity 5.5 Class Files</a></li>
+          </ul>
+          <h3>Homework</h3>
+          <ul>
+            <li>Work on Final Project</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="week">
+      <h1 class="week-title">Week 13</h1>
+      <div class="row">
+        <div class="col-xs-6">
+          <h2 class="day-title">Day 25 (11/15)</h2>
+          <h3>Topics</h3>
+          <ul>
+            <li>Lab Day</li>
+            <li>One-on-one Meetings</li>
+          </ul>
+          <h3>Homework</h3>
+          <ul>
+            <li><a href="https://github.com/mikewesthad/uic-interactive3d/raw/master/class-files/homework/Final.pdf">Final Project (Due 12/1)</a></li>
+          </ul>
+        </div>
+        <div class="col-xs-6">
+          <h2 class="day-title">Day 26 (11/17)</h2>
+          <h3>Topics</h3>
+          <ul>
+            <li>(Half Day)</li>
+            <li>Animation</li>
+          </ul>
+          <h3>Class Materials</h3>
+          <ul>
+            <li><a href="https://github.com/mikewesthad/uic-interactive3d/raw/master/class-files/projects/unity/Day26_Unity5.5_Class.zip">Unity 5.5 Class Files</a></li>
+          </ul>
+          <h3>Homework</h3>
+          <ul>
+            <li>Final Project Milestone Check-in on 11/22</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="week">
+      <h1 class="week-title">Week 14</h1>
+      <div class="row">
+        <div class="col-xs-6">
+          <h2 class="day-title">Day 27 (11/22)</h2>
+          <h3>Topics</h3>
+          <ul>
+            <li>Advanced Topics Demo</li>
+            <li>Milestone Check-in</li>
+          </ul>
+          <h3>Homework</h3>
+          <ul>
+            <li>Work on Final Project</li>
+          </ul>
+        </div>
+        <div class="col-xs-6">
+          <h2 class="day-title">No Class (11/24)</h2>
+        </div>
+      </div>
+    </div>
+
+    <div class="week">
+      <h1 class="week-title">Week 15</h1>
+      <div class="row">
+        <div class="col-xs-6">
+          <h2 class="day-title">Day 28 (11/29)</h2>
+          <h3>Topics</h3>
+          <ul>
+            <li>Lab Day</li>
+          </ul>
+          <h3>Homework</h3>
+          <ul>
+            <li>Final Project due 12/1</li>
+          </ul>
+        </div>
+        <div class="col-xs-6">
+          <h2 class="day-title">Day 29 (12/1)</h2>
+          <h3>Topics</h3>
+          <ul>
+            <li>Final Project Presentations</li>
+          </ul>
+        </div>
+      </div>
+    </div> -->
+
+  </div>
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="js/libs.js"></script>
+  </body>
+</html>
