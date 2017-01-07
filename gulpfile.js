@@ -55,7 +55,7 @@ var paths = {
     //     dest: dest
     // },
     deploy: {
-        remoteUrl: "https://github.com/mikewesthad/uic-interactive3d-spring2017.git"
+        remoteUrl: "https://github.com/mikewesthad/uic-interactive3d-spring2017.git",
         src: [dest + "/**/{*,*.*}"] // Match files with & without extensions
     }
 };
