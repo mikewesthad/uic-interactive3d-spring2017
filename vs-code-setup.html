@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <title>UIC Interactive 3D</title>
+  
+  <link rel="stylesheet" href="main.css">
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+
+  <script>
+    // If running locally, enable livereload for automatically refreshing
+    // the browser when a change to a file is made
+    var hostname = location.hostname;
+    if (hostname === "localhost" || hostname === "127.0.0.1") {
+      document.write('<script src="//' + hostname + 
+               ':35729/livereload.js?snipver=1"></' + 'script>');
+    }
+  </script>
+  </head>
+  <body>
+
+    <div class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+    <div class="navbar-header">
+      <a href="index.html" class="navbar-brand">Interactive 3D</a>
+      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      </button>
+    </div>
+
+    <div class="navbar-collapse collapse navbar-right" id="navbar-main">
+      <ul class="nav navbar-nav">
+      <li class="active">
+        <a href="index.html">
+          Syllabus
+          <div class="nav-underline"></div>
+        </a>        
+      </li>
+      <li>
+        <a href="schedule.html">
+          Schedule
+          <div class="nav-underline"></div>
+        </a>
+      </li>
+      <!-- <li>
+        <a href="project.html">Projects</a>
+      </li>
+      <li>
+        <a href="resource.html">Resources</a>
+      </li> -->
+      <li>
+        <a href="https://interactive3d-sp2017.slack.com">
+          Slack
+          <div class="nav-underline"></div>
+        </a>
+      </li>
+      </ul>
+    </div>
+    </div>
+  </div>
+
+  <article class="container">
+    <h1 id="unity-vs-code">Unity &amp; VS Code</h1>
+    <p>Unity&#39;s default code editor (MonoDevelop) is okay, but is buggy and annoying to use. This semester, we are going to be using VS Code for coding. It&#39;s a free, modern, open source editor with all the bells and whistles.</p>
+    <h2 id="setup">Setup</h2>
+    <ol>
+        <li>Make sure you have the latest version of Unity installed. (It needs to be 5.5 or higher.) You can check the version from <code>Help -&gt; About Unity</code> (Windows) or <code>Unity -&gt; About Unity</code> (Mac). If you installed Unity during class, you are all set to go.</li>
+        <li>Make sure you have VS Code installed. You can get it <a href="https://code.visualstudio.com/">here</a>.</li>
+        <li>
+            <p>Open VS Code and install VS Code extensions. See the GIF below for how to install an extension. Search for and install:</p>
+            <ul>
+                <li>C#</li>
+                <li>Debugger for Unity</li>
+                <li>(optional) Material-theme</li>
+            </ul>
+            <br/>
+            <p><img src="images/VsCodeExtensions.gif" alt=""></p>
+        </li>
+        <li>If you are on Mac, download and install <a href="http://www.mono-project.com/download/#download-mac">Mono</a>. This will allow you to compile C# code.</li>
+        <li>Set Unity to open scripts with VS Code. Go the preferences (<code>Edit -&gt; Preferences...</code> on Windows, <code>Unity -&gt; Preferences...</code> on Mac). Click on the <code>External Tools</code> menu. From there, set the <code>External Script Editor</code> by clicking &quot;Browse&quot; and navigating to your VS Code exe (Windows) or application (Mac). See these GIFs:<br/><br/>
+        <p>Windows:<br/><br/><img src="images/VsCodeExternalEditorWin.gif" alt=""></p>
+        <p>Mac:<br/><br/><img src="images/VsCodeExternalEditorMac.gif" alt=""></p>
+    </ol>
+    <h2 id="testing">Testing</h2>
+    <p>Test your setup! Inside of any project, create a new script. Double click to open it in VS Code. VS Code may go through an extra C# installation process - wait for that to finish. When it&#39;s done, go into the <code>Start</code> function and start typing <code>transform.</code> or <code>Debug.</code>, you should see some code suggestions pop up. If they do, you should be all set. Here&#39;s a GIF of that process and what the suggestions should look like:</p>
+    <br/>
+    <p><img src="images/VsCodeCompletions.gif" alt="" width="100%"></p>
+
+  </article>
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="js/libs.js"></script>
+  </body>
+</html>
